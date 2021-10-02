@@ -1,0 +1,83 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+.header {
+  padding: 60px 0;
+  font-size: 18px;
+  line-height: 1.2;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  display: flex;
+  &__item:not(:last-child) {
+    margin-right: 45px;
+  }
+}
+
+.user-nav {
+  display: flex;
+  &__link:not(:last-child) {
+    margin-right: 33px;
+  }
+  &__link {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 28px;
+    height: 23px;
+    position: relative;
+  }
+    &__link--search {
+    background-image: url(../images/icons/Search-icon.svg);
+  }
+    &__link--cart {
+    background-image: url(../images/icons/Cart-icon.svg);
+  }
+  &__num {
+    display: block;
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    font-size: 10px;
+    line-height: 1.5;
+    text-align: center;
+    right: -3px;
+    top: -3px;
+    color: #ffffff;
+  }
+}
+
+.status {
+  outline: 0;
+  border-radius: 5px;
+  transition: box-shadow 0.4s, color 0.4s, text-shadow 0.4s;
+  &:focus {
+    box-shadow: 0px 0px 0px 2px $focus-color; 
+  }
+  &:hover {
+    color: $accent-color;
+  }
+  &:active {
+    color: $color-default;
+    text-shadow: 2px 2px 5px $active-color;
+  }
+}
+
+// menu-item--active {
+//   color: $accent-color;
+// } спросить делать как делать текущую позицию с помощью js7
+
+
+
+
+
+
+@import 'media';
